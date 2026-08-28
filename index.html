@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div class="wrap">
+
+  <header class="top">
+    <span class="eyebrow">Card Catalog · ระบบสืบค้นและยืมคืน</span>
+    <h1 class="title">ห้องสมุดกลาง</h1>
+    <p class="sub">ค้นหาหนังสือจากชื่อเรื่อง ผู้แต่ง หรือหมวดหมู่ แล้วยืม-คืนได้ทันทีจากบัตรรายการ</p>
+    <div class="stats-row">
+      <div class="stat"><div class="num" id="statTotal">0</div><div class="lbl">รายการทั้งหมด</div></div>
+      <div class="stat"><div class="num" id="statAvail">0</div><div class="lbl">พร้อมให้ยืม</div></div>
+      <div class="stat"><div class="num" id="statOut">0</div><div class="lbl">ถูกยืมอยู่</div></div>
+    </div>
+  </header>
+
+  <nav class="drawers" id="drawers"></nav>
+
+  <div class="toolbar">
+    <div class="search-slip">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="searchBox" type="text" placeholder="ค้นหาชื่อหนังสือหรือผู้แต่ง…">
+    </div>
+    <select class="sort-select" id="sortSelect">
+      <option value="title">เรียงตาม: ชื่อหนังสือ</option>
+      <option value="author">เรียงตาม: ผู้แต่ง</option>
+      <option value="category">เรียงตาม: หมวดหมู่</option>
+      <option value="status">เรียงตาม: สถานะ</option>
+    </select>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <footer class="foot">
+    <span>ห้องสมุดกลาง — บัตรรายการดิจิทัล</span>
+    <span id="clock"></span>
+  </footer>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
